@@ -1,0 +1,224 @@
+@charset "utf-8"
+
+//
+	Anotaciones
+	-o : oculto
+	-v : visible
+
+/* Variables  */
+$N_100: #000
+$N_80: lighten(#000, 13.5%) // #222
+$N_60: lighten(#000, 20%) // #333
+$BN_50: lighten(#000, 33.5%) // #555
+$B_60: lighten(#000, 46.7%) // #777
+$B_80: lighten(#000, 93.5%) // #eee
+$B_100: #FFF
+
+$fuenteSansSerif: "Helvetica Neue", Helvetica, Arial, sans-serif
+$fuenteSerif: Georgia, "Times New Roman", Times, serif
+$fuenteMonospace: Menlo, Monaco, Consolas, "Courier New", monospace
+
+/* Reseteo completo de las etiquetas */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font-weight: 400
+	font: inherit
+	vertical-align: baseline
+	color: inherit
+	font-family: fuenteSansSerif
+strong
+	font-weight: 700
+a
+	text-decoration: none
+a:hover
+	text-decoration: underline
+textarea, input
+	outline: none
+
+/* Reseteo HTML5 para navegadores viejos */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section
+	display: block
+
+body
+	line-height: 1
+
+ol, ul
+	list-style: none
+
+blockquote, q
+	quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+	content: ''
+	content: none
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+/* Clases Centrado */
+.bloqueCentrado
+	display: block !important
+	margin-left: auto !important
+	margin-right: auto !important
+.flotadoDerecha
+	float: right !important
+.flotadoIzquierda
+	float: left !important
+.limpiarflotado:before,
+.limpiarflotado:after
+	content: " "
+	display: table
+.limpiarflotado:after
+	clear: both
+
+/* Clases Impresión */
+@media print
+	.impresion-o
+		display: none !important
+
+/* Utilidades */
+=border-radius ( $radius )
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	-ms-border-radius: $radius
+	border-radius: $radius
+
+=transition( $transition )
+	-webkit-transition: $transition
+	transition: $transition
+=transition-property( $transition-property )
+	-webkit-transition-property: $transition-property
+	transition-property: $transition-property
+=transition-delay( $transition-delay )
+	-webkit-transition-delay: $transition-delay
+	transition-delay: $transition-delay
+=transition-duration( $transition-duration )
+	-webkit-transition-duration: $transition-duration
+	transition-duration: $transition-duration
+=transition-timing-function( $timing-function )
+	-webkit-transition-timing-function: $timing-function
+	transition-timing-function: $timing-function
+=transition-transform( $transition )
+	-webkit-transition: -webkit-transform $transition
+	-moz-transition: -moz-transform $transition
+	-o-transition: -o-transform $transition
+	transition: transform $transition
+
+=rotate( $degrees )
+	-webkit-transform: rotate( $degrees )
+	-ms-transform: rotate( $degrees ) // IE9 only
+	transform: rotate( $degrees )
+=scale( $ratio-x, $ratio-y )
+	-webkit-transform: scale( $ratio-x, $ratio-y )
+	-ms-transform: scale( $ratio-x, $ratio-y ) // IE9 only
+	transform: scale( $ratio-x, $ratio-y )
+=translate( $x, $y )
+	-webkit-transform: translate( $x, $y )
+	-ms-transform: translate( $x, $y ) // IE9 only
+	transform: translate( $x, $y )
+=skew( $x, $y )
+	-webkit-transform: skew( $x, $y )
+	-ms-transform: skewX( $x ) skewY( $y ) // IE9+
+	transform: skew( $x, $y )
+=translate3d( $x, $y, $z )
+	-webkit-transform: translate3d( $x, $y, $z)
+	transform: translate3d( $x, $y, $z )
+=rotateX( $degrees )
+	-webkit-transform: rotateX( $degrees )
+	-ms-transform: rotateX( $degrees ) // IE9 only
+	transform: rotateX( $degrees )
+=rotateY( $degrees )
+	-webkit-transform: rotateY( $degrees )
+	-ms-transform: rotateY( $degrees ) // IE9 only
+	transform: rotateY( $degrees )
+=perspective( $perspective )
+	-webkit-perspective: $perspective
+	-moz-perspective: $perspective
+	perspective: $perspective
+=perspective-origin( $perspective )
+	-webkit-perspective-origin: $perspective
+	-moz-perspective-origin: $perspective
+	perspective-origin: $perspective
+=transform-origin( $origin )
+	-webkit-transform-origin: $origin
+	-moz-transform-origin: $origin
+	-ms-transform-origin: $origin // IE9 only
+	transform-origin: $origin
+
+=content-columns( $width, $count, $gap)
+	-webkit-column-width: $width
+	-moz-column-width: $width
+	column-width: $width
+	-webkit-column-count: $count
+	-moz-column-count: $count
+	column-count: $count
+	-webkit-column-gap: $gap
+	-moz-column-gap: $gap
+	column-gap: $gap
+
+=gradient ( $Deg, $Color1, $Color2 )
+	background: $Color1 // Old browsers
+	background: -moz-linear-gradient( $Deg, $Color1, $Color2 ) // FF
+	background: -webkit-linear-gradient( $Deg, $Color1, $Color2 ) // Chrome, Safari
+	background: linear-gradient( $Deg, $Color1, $Color2 ) // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+
+/* Para Responsivo */
+@import "../Paranoida_MQ.scss"
+
+/* Responsivo por dispositivos */
+
+// Telefono - extra chica
+$xc: 480px
+// Telefono - Tableta - chica
+$c: 540px
+// Tableta - Mediana
+$m: 768px
+// Tableta - Monitor - grande
+$g: 980px
+// Monitor - extra grande
+$xg: 1366px
+
+@include screen ( $g, $xg )
+	.xg-v
+		display: block !important
+	.xg-o
+		display: none !important
+@include screen ( $m, $g )
+	.g-v
+		display: block !important
+	.g-o
+		display: none !important
+@include screen ( $c, $m )
+	.m-v
+		display: block !important
+	.m-o
+		display: none !important
+@include screen ( $xc, $c )
+	.c-v
+		display: block !important
+	.c-o
+		display: none !important
+@include screen ( 0px, $xc )
+	.xc-v
+		display: block !important
+	.xc-o
+		display: none !important
