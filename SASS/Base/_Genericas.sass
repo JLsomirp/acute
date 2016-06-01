@@ -1,0 +1,161 @@
+@charset "utf-8"
+
+/*
+	Clases Genéricas para colores
+	Grises: B100, B80, B60, BN50, N60, N80, N_100
+	Colores: Rojo, Amarillo, Azul, Verde, Morado, Cafe, Naranja, Rosa
+	Colores Pastel: Rojo_P, Amarillo_P, Azul_P, Verde_P, Morado_P, Cafe_P, Naranja_P, Rosa_P
+
+	Posiciones Genéricas
+	_B : Aplicar al borde
+	_F : Aplicar al fondo
+	_T : Aplicar al texto
+
+	Por lo tanto esto queda de la siguiente manera: .Azul_B
+
+.Amarillo_T
+	color: $Amarillo
+.Amarillo_F
+	background-color: $Amarillo
+.Amarillo_B
+	border-color: $Amarillo
+
+.Azul_T
+	color: $Azul
+.Azul_F
+	background-color: $Azul
+.Azul_B
+	border-color: $Azul
+
+.Cafe_T
+	color: $Cafe
+.Cafe_F
+	background-color: $Cafe
+.Cafe_B
+	border-color: $Cafe
+
+.Morado_T
+	color: $Morado
+.Morado_F
+	background-color: $Morado
+.Morado_B
+	border-color: $Morado
+
+.Naranja_T
+	color: $Naranja
+.Naranja_F
+	background-color: $Naranja
+.Naranja_B
+	border-color: $Naranja
+
+.Rojo_T
+	color: $Rojo
+.Rojo_F
+	background-color: $Rojo
+.Rojo_B
+	border-color: $Rojo
+
+.Rosa_T
+	color: $Rosa
+.Rosa_F
+	background-color: $Rosa
+.Rosa_B
+	border-color: $Rosa
+
+.Verde_T
+	color: $Verde
+.Verde_F
+	background-color: $Verde
+.Verde_B
+	border-color: $Verde
+
+/*
+	Colores Pastel, misma funcionalidad que el anterior
+.Amarillo_P_T
+	color: $Amarillo_P
+.Amarillo_P_F
+	background-color: $Amarillo_P
+.Amarillo_P_B
+	border-color: $Amarillo_P
+
+.Azul_P_T
+	color: $Azul_P
+.Azul_P_F
+	background-color: $Azul_P
+.Azul_P_B
+	border-color: $Azul_P
+
+.Cafe_P_T
+	color: $Cafe_P
+.Cafe_P_F
+	background-color: $Cafe_P
+.Cafe_P_B
+	border-color: $Cafe_P
+
+.Morado_P_T
+	color: $Morado_P
+.Morado_P_F
+	background-color: $Morado_P
+.Morado_P_B
+	border-color: $Morado_P
+
+.Naranja_P_T
+	color: $Naranja_P
+.Naranja_P_F
+	background-color: $Naranja_P
+.Naranja_P_B
+	border-color: $Naranja_P
+
+.Rojo_P_T
+	color: $Rojo_P
+.Rojo_P_F
+	background-color: $Rojo_P
+.Rojo_P_B
+	border-color: $Rojo_P
+
+.Rosa_P_T
+	color: $Rosa_P
+.Rosa_P_F
+	background-color: $Rosa_P
+.Rosa_P_B
+	border-color: $Rosa_P
+
+.Verde_P_T
+	color: $Verde_P
+.Verde_P_F
+	background-color: $Verde_P
+.Verde_P_B
+	border-color: $Verde_P
+
+
+/*
+	Clases Genéricas para texto
+	.T_I : Formato del texto en itálicas
+	.T_L : Formato del texto en Light (100)
+	.T_N : Formato del texto en Normal (400)
+	.T_SB : Formato del texto en semibold (600)
+	.T_B : Formato del texto en bold (700)
+	.T_EB : Formato del texto en extra bold (900)
+	.T_S : Formato del texto subrayado
+.T_I
+	font-style: italic
+.T_L
+	font-weight: 100
+.T_N
+	font-weight: 400
+.T_SB
+	font-weight: 600
+.T_B
+	font-weight: 700
+.T_EB
+	font-weight: 900
+.T_S
+	text-decoration: underline
+
+/*
+	Otras para que se pueden necesitar
+	.Deshabilitado : baja la opacidad a la mitad
+.Deshabilitado
+	cursor: default
+	opacity: 0.5
+	pointer-events: none

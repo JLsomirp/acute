@@ -1,0 +1,46 @@
+@charset "utf-8"
+
+/*
+	Resolucion de pantalla:
+	Telefono Vertical | extra chica
+$xc: 480px
+/*
+	Telefono Horizontal - Tableta | chica
+$c: 540px
+/*
+	Tableta Vertical | Mediana
+$m: 768px
+/*
+	Tableta Horizontal - Monitor | grande
+$g: 1024px // 980px
+/*
+	Monitor | extra grande
+$xg: 1366px
+
+/*
+	Objetos visibles e Invisibles dependiendo e la resolución
+@include screen ( $g, $xg )
+	.xg-v
+		display: block !important
+	.xg-o
+		display: none !important
+@include screen ( $m, $g )
+	.g-v
+		display: block !important
+	.g-o
+		display: none !important
+@include screen ( $c, $m )
+	.m-v
+		display: block !important
+	.m-o
+		display: none !important
+@include screen ( $xc, $c )
+	.c-v
+		display: block !important
+	.c-o
+		display: none !important
+@include screen ( 0px, $xc )
+	.xc-v
+		display: block !important
+	.xc-o
+		display: none !important
