@@ -2,7 +2,7 @@
 
 /*
 	Clases Genéricas para colores
-	Grises: B100, B80, B60, BN50, N60, N80, N_100
+	Grises: Blanco, B80, B60, Gris, N60, N80, Negro
 	Colores: Rojo, Amarillo, Azul, Verde, Morado, Cafe, Naranja, Rosa
 	Colores Pastel: Rojo_P, Amarillo_P, Azul_P, Verde_P, Morado_P, Cafe_P, Naranja_P, Rosa_P
 
@@ -10,67 +10,168 @@
 	_B : Aplicar al borde
 	_F : Aplicar al fondo
 	_T : Aplicar al texto
+	_ _H : Aplicar durante el Hover
 
 	Por lo tanto esto queda de la siguiente manera: .Azul_B
 
-.Amarillo_T
+	Seguido de si se requiere para mostrar en hover: .Azul_B_H
+
+/*
+	Blanco & Negro
+.Blanco_T,
+.Blanco_T_H:hover
+	color: $Blanco
+.Blanco_F,
+.Blanco_F_H:hover
+	background-color: $Blanco
+.Blanco_B,
+.Blanco_B_H:hover
+	border-color: $Blanco
+
+.B_80_T,
+.B_80_T_H:hover
+	color: $B_80
+.B_80_F,
+.B_80_F_H:hover
+	background-color: $B_80
+.B_80_B,
+.B_80_B_H:hover
+	border-color: $B_80
+
+.B_60_T,
+.B_60_T_H:hover
+	color: $B_60
+.B_60_F,
+.B_60_F_H:hover
+	background-color: $B_60
+.B_60_B,
+.B_60_B_H:hover
+	border-color: $B_60
+
+.Gris_T,
+.Gris_T_H:hover
+	color: $Gris
+.Gris_F,
+.Gris_F_H:hover
+	background-color: $Gris
+.Gris_B,
+.Gris_B_H:hover
+	border-color: $Gris
+
+.N_60_T,
+.N_60_T_H:hover
+	color: $N_60
+.N_60_F,
+.N_60_F_H:hover
+	background-color: $N_60
+.N_60_B,
+.N_60_B_H:hover
+	border-color: $N_60
+
+.N_80_T,
+.N_80_T_H:hover
+	color: $N_80
+.N_80_F,
+.N_80_F_H:hover
+	background-color: $N_80
+.N_80_B,
+.N_80_B_H:hover
+	border-color: $N_80
+
+.Negro_T,
+.Negro_T_H:hover
+	color: $Negro
+.Negro_F,
+.Negro_F_H:hover
+	background-color: $Negro
+.Negro_B,
+.Negro_B_H:hover
+	border-color: $Negro
+
+/*
+	Colores
+.Amarillo_T,
+.Amarillo_T_H:hover
 	color: $Amarillo
-.Amarillo_F
+.Amarillo_F,
+.Amarillo_F_H:hover
 	background-color: $Amarillo
-.Amarillo_B
+.Amarillo_B,
+.Amarillo_F_H:hover
 	border-color: $Amarillo
 
-.Azul_T
+.Azul_T,
+.Azul_T_H:hover
 	color: $Azul
-.Azul_F
+.Azul_F,
+.Azul_F_H:hover
 	background-color: $Azul
-.Azul_B
+.Azul_B,
+.Azul_B_H:hover
 	border-color: $Azul
 
-.Cafe_T
+.Cafe_T,
+.Cafe_T_H:hover
 	color: $Cafe
-.Cafe_F
+.Cafe_F,
+.Cafe_F_H:hover
 	background-color: $Cafe
-.Cafe_B
+.Cafe_B,
+.Cafe_B_H:hover
 	border-color: $Cafe
 
-.Morado_T
+.Morado_T,
+.Morado_T_H:hover
 	color: $Morado
-.Morado_F
+.Morado_F,
+.Morado_F_H:hover
 	background-color: $Morado
-.Morado_B
+.Morado_B,
+.Morado_B_H:hover
 	border-color: $Morado
 
-.Naranja_T
+.Naranja_T,
+.Naranja_T_H:hover
 	color: $Naranja
-.Naranja_F
+.Naranja_F,
+.Naranja_F_H:hover
 	background-color: $Naranja
-.Naranja_B
+.Naranja_B,
+.Naranja_B_H:hover
 	border-color: $Naranja
 
-.Rojo_T
+.Rojo_T,
+.Rojo_T_H:hover
 	color: $Rojo
-.Rojo_F
+.Rojo_F,
+.Rojo_F_H:hover
 	background-color: $Rojo
-.Rojo_B
+.Rojo_B,
+.Rojo_B_H:hover
 	border-color: $Rojo
 
-.Rosa_T
+.Rosa_T,
+.Rosa_T_H:hover
 	color: $Rosa
-.Rosa_F
+.Rosa_F,
+.Rosa_F_H:hover
 	background-color: $Rosa
-.Rosa_B
+.Rosa_B,
+.Rosa_B_H:hover
 	border-color: $Rosa
 
-.Verde_T
+.Verde_T,
+.Verde_T_H:hover
 	color: $Verde
-.Verde_F
+.Verde_F,
+.Verde_F_H:hover
 	background-color: $Verde
-.Verde_B
+.Verde_B,
+.Verde_B_H:hover
 	border-color: $Verde
 
 /*
-	Colores Pastel, misma funcionalidad que el anterior
+	Colores Pastel
 .Amarillo_P_T
 	color: $Amarillo_P
 .Amarillo_P_F
@@ -129,7 +230,7 @@
 
 
 /*
-	Clases Genéricas para texto
+	Clases Genéricas para el formato del texto
 	.T_I : Formato del texto en itálicas
 	.T_L : Formato del texto en Light (100)
 	.T_N : Formato del texto en Normal (400)
@@ -137,20 +238,42 @@
 	.T_B : Formato del texto en bold (700)
 	.T_EB : Formato del texto en extra bold (900)
 	.T_S : Formato del texto subrayado
-.T_I
+.T_I,
+.T_I_H:hover
 	font-style: italic
-.T_L
+.T_L,
+.T_L_H:hover
 	font-weight: 100
-.T_N
+.T_N,
+.T_N_H:hover
 	font-weight: 400
-.T_SB
+.T_SB,
+.T_SB_H:hover
 	font-weight: 600
-.T_B
+.T_B,
+.T_B_H:hover
 	font-weight: 700
-.T_EB
+.T_EB,
+.T_EB_H:hover
 	font-weight: 900
-.T_S
+.T_S,
+.T_S_H:hover
 	text-decoration: underline
+
+/*
+	Clases Genéricas para centrado y ajuste del texto
+.AT_C,
+.AT_C_H:hover
+	text-align: center
+.AT_D,
+.AT_D_H:hover
+	text-align: right
+.AT_I,
+.AT_I_H:hover
+	text-align: left
+.AT_J,
+.AT_J_H:hover
+	text-align: justify
 
 /*
 	Otras para que se pueden necesitar
@@ -159,3 +282,10 @@
 	cursor: default
 	opacity: 0.5
 	pointer-events: none
+
+/*
+	Etiqueta HR vertical u horizontal
+hr.vertical
+	height: 100%
+hr.horizontal
+	width: 100%

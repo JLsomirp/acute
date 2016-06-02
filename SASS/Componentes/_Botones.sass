@@ -8,5 +8,23 @@
 	- <input type="button"> ... </input>
 	- <input type="submit"> ... </input>
 
+[type=button],
+[type=submit],
+button,
 .btn
-	
+	text-align: center
+	width: auto
+	max-width: 100%
+	display: inline-block
+	height: $TA_base
+	line-height: $TA_base
+	font-size: $TT_base
+	margin: 0 auto
+	padding: 0 3rem
+	box-sizing: border-box
+	cursor: pointer
+	user-select: none
+	transition-property: background-color, border-color
+	transition-duration: 200ms
+	&:focus
+		text-decoration: none

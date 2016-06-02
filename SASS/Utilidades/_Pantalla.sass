@@ -1,24 +1,15 @@
 @charset "utf-8"
 
 /*
-	Resolucion de pantalla:
-	Telefono Vertical | extra chica
-$xc: 480px
-/*
-	Telefono Horizontal - Tableta | chica
-$c: 540px
-/*
-	Tableta Vertical | Mediana
-$m: 768px
-/*
-	Tableta Horizontal - Monitor | grande
-$g: 1024px // 980px
-/*
-	Monitor | extra grande
-$xg: 1366px
+	Resolucion de pantalla
 
 /*
 	Objetos visibles e Invisibles dependiendo e la resolución
+@include min-screen ( $xg )
+	.xg-v
+		display: block !important
+	.xg-o
+		display: none !important
 @include screen ( $g, $xg )
 	.xg-v
 		display: block !important
