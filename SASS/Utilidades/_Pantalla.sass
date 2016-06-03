@@ -1,37 +1,87 @@
 @charset "utf-8"
 
 /*
-	Resolucion de pantalla
+	Mostrar u ocultar objetos en la pantalla
+	Resoluciones : xx, xg, g, m, c, xc
+	_v : para que sea visible en la resolución deseada
+	_o : para que se oculte en la resolución deseada
+	_ov : para que no se muestre, excepto en la resolución deseada
 
-/*
-	Objetos visibles e Invisibles dependiendo e la resolución
-@include min-screen ( $xg )
-	.xg-v
+@include min-screen ( $xx )
+	.xx_v
 		display: block !important
-	.xg-o
+	.xx_o
 		display: none !important
+	.xg_ov,
+	.g_ov,
+	.m_ov,
+	.c_ov,
+	.xc_ov
+		display: none !important
+	.xx_ov
+		display: block !important
 @include screen ( $g, $xg )
-	.xg-v
+	.xg_v
 		display: block !important
-	.xg-o
+	.xg_o
 		display: none !important
+	.xx_ov,
+	.g_ov,
+	.m_ov,
+	.c_ov,
+	.xc_ov
+		display: none !important
+	.xg_ov
+		display: block !important
 @include screen ( $m, $g )
-	.g-v
+	.g_v
 		display: block !important
-	.g-o
+	.g_o
 		display: none !important
+	.xx_ov,
+	.xg_ov,
+	.m_ov,
+	.c_ov,
+	.xc_ov
+		display: none !important
+	.g_ov
+		display: block !important
 @include screen ( $c, $m )
-	.m-v
+	.m_v
 		display: block !important
-	.m-o
+	.m_o
 		display: none !important
+	.xx_ov,
+	.xg_ov,
+	.g_ov,
+	.c_ov,
+	.xc_ov
+		display: none !important
+	.m_ov
+		display: block !important
 @include screen ( $xc, $c )
-	.c-v
+	.c_v
 		display: block !important
-	.c-o
+	.c_o
 		display: none !important
+	.xx_ov,
+	.xg_ov,
+	.g_ov,
+	.m_ov,
+	.xc_ov
+		display: none !important
+	.c_ov
+		display: block !important
 @include screen ( 0px, $xc )
-	.xc-v
+	.xc_v
 		display: block !important
-	.xc-o
+	.xc_o
 		display: none !important
+	.xx_ov,
+	.xg_ov,
+	.g_ov,
+	.m_ov,
+	.c_ov
+		display: none !important
+	.xc_ov
+		display: block !important

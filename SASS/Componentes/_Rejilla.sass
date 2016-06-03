@@ -2,16 +2,18 @@
 
 /*
 	Rejilla
-	Para una rejilla de 12 columnas
+	Con 12 columnas
 
 .Rejilla
 	display: block
 	clear: both
 	width: 100%
+	height: auto
 	position: relative
 	.Rx1, .Rx2, .Rx3, .Rx4, .Rx5, .Rx6,
 	.Rx7, .Rx8, .Rx9, .Rx10, .Rx11, .Rx12
 		float: left
+		display: block
 	.Rx1
 		width: ( 100% / 12 )
 	.Rx2
@@ -36,3 +38,6 @@
 		width: ( 100% / 12 ) * 11
 	.Rx12
 		width: ( 100% / 12 ) * 12
+
+/*
+	Que cuando cambia de tamaño al de un ipad o inferior, debe disminuir su tamaño
